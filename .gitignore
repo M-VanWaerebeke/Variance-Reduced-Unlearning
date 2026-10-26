@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.DS_Store
+.idea/
+.vscode/
+
+# Generated datasets, checkpoints, manifests, caches, figures and logs.
+data/
+cache/
+outputs/
+checkpoints/
+shadow_manifests/
+*_models/
+*_full_models/
+*_scratch_models/
+*_figures/
+*.pt
+*.pth
+*.pkl
+*.pickle
+*.pdf
+*.log
+*.err

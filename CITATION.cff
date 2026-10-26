@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this research implementation, please cite the associated paper."
+title: "Variance-Reduced Unlearning (VRU): research implementation"
+type: software
+license: MIT
+authors:
+  - family-names: "Van Waerebeke"
+    given-names: "Martin"
+preferred-citation:
+  type: article
+  title: "Variance-Reduced (ε, δ)-Unlearning using Forget Set Gradients"
+  authors:
+    - family-names: "Van Waerebeke"
+      given-names: "Martin"
+    - family-names: "Lorenzi"
+      given-names: "Marco"
+    - family-names: "Scaman"
+      given-names: "Kevin"
+    - family-names: "El Mhamdi"
+      given-names: "El Mahdi"
+    - family-names: "Neglia"
+      given-names: "Giovanni"
+  year: 2026
+  journal: "arXiv"
+  doi: "10.48550/arXiv.2602.14938"
+  url: "https://arxiv.org/abs/2602.14938"
