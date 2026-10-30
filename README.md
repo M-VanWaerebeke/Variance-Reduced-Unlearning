@@ -42,16 +42,16 @@ The dataset loaders support scikit-learn Digits and Breast Cancer, plus MNIST th
 
 ## Experiment launchers
 
-Run the shell scripts from a checkout of this repository. Each script specifies its dataset, model, learning rates, noise settings, forget fractions, and number of seeds. The table describes the configurations included in the scripts.
+The experiment scripts for the paper's figures are linked below. Run them from a checkout of this repository. Each script specifies its dataset, model, learning rates, noise settings, forget fractions, and number of seeds.
 
 | Launcher | Experiment configuration |
 | --- | --- |
-| `scripts/figure1.sh` | Digits, LR: utility versus forget fraction; VRU and comparison methods |
-| `scripts/figure2.sh LR` | Digits, LR: utility versus membership-inference risk, with five shadows |
-| `scripts/figure2.sh NN` | Digits, NN: utility versus membership-inference risk, with five shadows |
-| `scripts/figure2b_archived.sh` | Digits, NN: an additional privacy/utility configuration with 100 shadows and batch size 64 |
-| `scripts/figure3.sh` | Digits, LR: projected versus unprojected VRU |
-| `scripts/figure4.sh` | Breast Cancer, LR: privacy/utility evaluation with seven shadows |
+| [`scripts/figure1.sh`](scripts/figure1.sh) | Digits, LR: utility versus forget fraction; VRU and comparison methods |
+| [`scripts/figure2.sh`](scripts/figure2.sh) `LR` | Digits, LR: utility versus membership-inference risk, with five shadows |
+| [`scripts/figure2.sh`](scripts/figure2.sh) `NN` | Digits, NN: utility versus membership-inference risk, with five shadows |
+| [`scripts/figure2b_archived.sh`](scripts/figure2b_archived.sh) | Digits, NN: an additional privacy/utility configuration with 100 shadows and batch size 64 |
+| [`scripts/figure3.sh`](scripts/figure3.sh) | Digits, LR: projected versus unprojected VRU |
+| [`scripts/figure4.sh`](scripts/figure4.sh) | Breast Cancer, LR: privacy/utility evaluation with seven shadows |
 
 For example:
 
@@ -61,7 +61,7 @@ bash scripts/figure2.sh LR
 bash scripts/figure3.sh
 ```
 
-These launchers run full experiment grids and can require substantial compute, particularly for shadow-model training. They describe the included configurations; they do not establish an exact reproduction of the paper figures.
+These launchers run full experiment grids and can require substantial compute, particularly for shadow-model training.
 
 `PYTHON=/path/to/python` selects the interpreter used by a launcher. Privacy launchers generate shadow manifests before running the evaluation. `--parallel_jobs` in `generate_shadow_csv.py` controls shadow-training workers, and `--attack_parallel_jobs` in `risk_vs_privacy.py` controls attack-evaluation workers.
 
